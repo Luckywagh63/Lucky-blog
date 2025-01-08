@@ -1,233 +1,85 @@
 ---
-title: C Programming Tutorial
-description: This is JavaScript tutorial and this is for learning JavaScript
-slug: c-programming-tutorial
-date: 02/03/2025
-author: Harry
+title: Apex Carpooling
+description: A smarter way to commute with Apex Carpooling
+slug: apex-carpooling-guide
+date: 09/01/2025
+author: Lucky Wagh
 image: /typescript.webp
 ---
 
-Welcome to this comprehensive C programming tutorial! Whether you're a complete beginner or looking to deepen your understanding of C, this guide will take you through the fundamentals and introduce advanced concepts as you progress.
+Welcome to **Apex Carpooling**, your ultimate carpooling solution! Whether you're looking to reduce your carbon footprint, save money on daily commutes, or find convenient travel options, Apex Carpooling is here to make your rides efficient, affordable, and environmentally friendly.
 
-## Introduction to C
+## Why Choose Apex Carpooling?
 
-C is a powerful general-purpose programming language that is widely used in system programming, embedded systems, and applications requiring high performance. It is known for its efficiency, close-to-hardware control, and portability, making it a crucial language in the software industry.
+### Benefits of Carpooling
+- **Cost Savings**: Share travel costs with fellow commuters.
+- **Convenience**: Find rides tailored to your schedule and route.
+- **Environmental Impact**: Reduce CO₂ emissions and contribute to a greener planet.
+- **Community Building**: Connect with people in your area or workplace.
 
-### Why Learn C?
+### Features of Apex Carpooling
+- **User-Friendly Interface**: Simple and intuitive design for easy navigation.
+- **Real-Time Updates**: Stay informed with live notifications on ride status.
+- **Secure Payments**: Hassle-free and secure payment options.
+- **Verified Users**: Travel safely with verified and trusted community members.
 
-- **Foundation for Other Languages**: C provides the building blocks for many modern languages, such as C++, Java, and Python.
-- **Performance**: C is highly efficient and is used in performance-critical applications.
-- **Low-level Control**: C allows you to work closely with memory and hardware, providing more control over system resources.
+## How It Works
 
-## Setting Up C
+### Step 1: Create an Account
+Sign up for free by providing basic details or linking your social accounts. It's quick and easy!
 
-To get started with C programming, you'll need to set up a development environment. Here are the steps:
+### Step 2: Search for a Ride
+Use our advanced search feature to find rides that match your location, destination, and schedule.
 
-1. **Install a C Compiler**: You can use GCC (GNU Compiler Collection) for Linux/macOS or MinGW for Windows. Both are free and widely used.
-2. **Choose an IDE/Text Editor**: Popular options include Visual Studio Code, Code::Blocks, or Eclipse. Alternatively, you can use a simple text editor like Sublime Text.
-3. **Verify Installation**: Once the compiler is installed, verify it by typing `gcc --version` in the terminal or command prompt.
+### Step 3: Join or Offer a Ride
+- **As a Rider**: Request to join an existing ride.
+- **As a Driver**: Offer a ride by listing your route, time, and available seats.
 
-## C Basics
+### Step 4: Confirm and Travel
+Once a ride is confirmed, you'll receive a confirmation SMS with details about the driver/rider. Enjoy a stress-free commute!
 
-Now that your environment is set up, let’s start with the basics. In this section, we'll cover:
+## Key Features
 
-- **Variables and Data Types**: Learn how to declare and use variables in C.
-- **Control Structures**: Understand how to use conditional statements and loops.
-- **Functions**: Learn how to write reusable code blocks.
+### Interactive Dashboard
+Keep track of your upcoming rides, trip history, and payment records in one place.
 
-### Variables and Data Types
+### Location-Based Matching
+Effortlessly find carpooling options near you using GPS technology.
 
-```c showLineNumbers {1-3} /printf/
-#include <stdio.h>
+### Ratings and Reviews
+Share feedback about your rides to build trust within the community.
 
-int main() {
-    int age = 25;
-    float height = 5.9;
-    char initial = 'A';
+### Custom Notifications
+Stay informed with reminders, alerts, and ride updates.
 
-    printf("Age: %d, Height: %.1f, Initial: %c\n", age, height, initial);
-    return 0;
-}
-```
+### Flexible Payment Options
+Choose between cash payments or secure online transactions.
 
-### Control Structures
+## Example Scenarios
 
-```c
-#include <stdio.h>
+### Daily Commutes
+Whether you're commuting to work, school, or the gym, find a carpooling option that suits your daily schedule.
 
-int main() {
-    int age = 20;
+### Long-Distance Travel
+Planning a weekend getaway? Apex Carpooling helps you connect with others traveling to the same destination.
 
-    if (age >= 18) {
-        printf("You are an adult.\n");
-    } else {
-        printf("You are a minor.\n");
-    }
+### Event Transportation
+Heading to a concert, conference, or festival? Coordinate rides with attendees to save on transportation.
 
-    for (int i = 0; i < 5; i++) {
-        printf("Count: %d\n", i);
-    }
+## Safety First
 
-    return 0;
-}
-```
+We prioritize your safety with:
+- **Verified Profiles**: All users undergo verification.
+- **In-App Communication**: Chat securely within the app to finalize ride details.
+- **SOS Feature**: Emergency contact feature for added security.
 
-### Functions
+## Getting Started
 
-```c
-#include <stdio.h>
+Here's an example of what you'll see when searching for a ride:
 
-void greet(char name[]) {
-    printf("Hello, %s!\n", name);
-}
-
-int main() {
-    greet("Alice");
-    return 0;
-}
-```
-
-## Intermediate C
-
-Once you are familiar with the basics, it's time to explore more advanced features of C:
-
-- **Arrays and Pointers**: Learn how to work with arrays and pointers, which are fundamental in C programming.
-- **File I/O**: Understand how to read from and write to files.
-- **Dynamic Memory Allocation**: Explore memory management using `malloc`, `calloc`, and `free`.
-
-### Arrays and Pointers
-
-```c
-#include <stdio.h>
-
-int main() {
-    int numbers[5] = {1, 2, 3, 4, 5};
-    int *ptr = numbers;
-
-    for (int i = 0; i < 5; i++) {
-        printf("Number: %d, Address: %p\n", *(ptr + i), (ptr + i));
-    }
-
-    return 0;
-}
-```
-
-### File I/O
-
-```c
-#include <stdio.h>
-
-int main() {
-    FILE *file = fopen("example.txt", "w");
-    if (file == NULL) {
-        printf("Error opening file!\n");
-        return 1;
-    }
-
-    fprintf(file, "Hello, File!\n");
-    fclose(file);
-
-    return 0;
-}
-```
-
-### Dynamic Memory Allocation
-
-```c
-#include <stdio.h>
-#include <stdlib.h>
-
-int main() {
-    int *arr;
-    int size = 5;
-
-    arr = (int*) malloc(size * sizeof(int));
-
-    for (int i = 0; i < size; i++) {
-        arr[i] = i + 1;
-        printf("Value: %d\n", arr[i]);
-    }
-
-    free(arr);
-
-    return 0;
-}
-```
-
-## Advanced C
-
-Now that you are comfortable with intermediate topics, let’s move on to some advanced C programming concepts:
-
-- **Structures**: Learn how to group different data types together.
-- **Pointers to Functions**: Explore how to use pointers with functions for flexibility.
-- **Memory Management**: Delve deeper into memory management and optimization.
-
-### Structures
-
-```c
-#include <stdio.h>
-
-struct Student {
-    char name[50];
-    int age;
-    float grade;
-};
-
-int main() {
-    struct Student s1 = {"Alice", 20, 85.5};
-
-    printf("Name: %s, Age: %d, Grade: %.2f\n", s1.name, s1.age, s1.grade);
-    return 0;
-}
-```
-
-### Pointers to Functions
-
-```c
-#include <stdio.h>
-
-void add(int a, int b) {
-    printf("Sum: %d\n", a + b);
-}
-
-int main() {
-    void (*func_ptr)(int, int) = &add;
-    func_ptr(10, 20);
-
-    return 0;
-}
-```
-
-### Memory Management
-
-```c
-#include <stdio.h>
-#include <stdlib.h>
-
-int main() {
-    int *arr;
-    int size = 10;
-
-    arr = (int*) malloc(size * sizeof(int));
-
-    if (arr == NULL) {
-        printf("Memory not allocated.\n");
-        return 1;
-    }
-
-    for (int i = 0; i < size; i++) {
-        arr[i] = i * 2;
-        printf("Value: %d\n", arr[i]);
-    }
-
-    free(arr);
-
-    return 0;
-}
-```
-
-## Conclusion
-
-Congratulations on making it through this C programming tutorial! You’ve covered everything from the basics of C to advanced topics like structures and memory management. Keep practicing and exploring the vast capabilities of C to enhance your programming skills.
-
-Happy coding!
+```plaintext
+Ride from: Downtown to Uptown
+Date: 09/01/2025
+Driver: John Doe
+Seats Available: 2
+Cost: ₹150
